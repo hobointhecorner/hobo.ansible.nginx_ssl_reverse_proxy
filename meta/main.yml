@@ -1,5 +1,4 @@
 ---
----
 galaxy_info:
   role_name: hobo.ansible.nginx_ssl_reverse_proxy
   author: hobointhecorner
