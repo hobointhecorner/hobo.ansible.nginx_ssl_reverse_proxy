@@ -1,0 +1,17 @@
+server {
+  listen [::]:{{ nginx_redirect_port }} ssl http2;    ## Listens on port 443 IPv6 with http2 and ssl enabled
+  listen {{ nginx_redirect_port }} ssl http2; ## Listens on port 443 IPv4 with http2 and ssl enabled
+
+  server_name {{ nginx_redirect_hostname|mandatory }};
+
+  ## SSL SETTINGS ##
+  ssl_session_timeout 30m;
+  ssl_protocols TLSv1.2 TLSv1.1 TLSv1;
+  ssl_certificate {{ nginx_redirect_cert_path|mandatory }};
+  ssl_certificate_key {{ nginx_redirect_key_path|mandatory }};
+  ssl_session_cache shared:SSL:10m;
+
+  location / {
+    proxy_pass {{ nginx_redirect_url|mandatory }};
+  }
+}

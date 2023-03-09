@@ -1,0 +1,12 @@
+---
+---
+galaxy_info:
+  role_name: hobo.ansible.nginx_ssl_reverse_proxy
+  author: hobointhecorner
+  description: Configure a basic ssl reverse proxy server for nginx
+  license: MPL-2.0
+
+  galaxy_tags: []
+
+dependencies: []
+allow_duplicates: true

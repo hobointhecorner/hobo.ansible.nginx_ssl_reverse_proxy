@@ -1,0 +1,8 @@
+---
+nginx_redirect_config_dir:
+nginx_redirect_hostname:
+nginx_redirect_url:
+nginx_redirect_cert_path:
+nginx_redirect_key_path:
+nginx_redirect_owner:
+nginx_redirect_group:

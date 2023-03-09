@@ -1,0 +1,12 @@
+---
+- name: Template nginx reverse proxy server file
+  become: yes
+  tags:
+    - nginx
+    - reverse_proxy
+  template:
+    src: templates/server.conf.j2
+    dest: "{{ nginx_redirect_config_dir|mandatory }}/{{ nginx_redirect_hostname|mandatory }}.conf"
+    owner: "{{ nginx_redirect_owner|default(omit) }}"
+    group: "{{ nginx_redirect_group|default(omit) }}"
+    mode: "{{ nginx_redirect_mode|default(omit) }}"
