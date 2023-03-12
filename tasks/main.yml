@@ -1,6 +1,7 @@
 ---
 - name: Template nginx reverse proxy server file
   become: yes
+  notify: Reload nginx service
   tags:
     - nginx
     - reverse_proxy
