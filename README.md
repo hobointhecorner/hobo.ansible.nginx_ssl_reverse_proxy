@@ -6,6 +6,9 @@ Configure a basic ssl reverse proxy server for nginx
 
 `ansible-galaxy install git+https://github.com/hobointhecorner/hobo.ansible.nginx_ssl_reverse_proxy.git[,<branch or commit hash>]`
 
+### Requirements
+- [hobo.ansible.nginx](https://github.com/hobointhecorner/hobo.ansible.nginx)
+
 ## Variables
 |           Name            |  Type  | Required  | Default | Description |
 |---------------------------|--------|-----------|---------|-------------|
